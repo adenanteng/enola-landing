@@ -1,15 +1,39 @@
-import { Geist, Geist_Mono, Inter } from "next/font/google"
+import { Geist_Mono, Poppins } from "next/font/google"
+import type { Metadata } from "next"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-sans",
+})
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: "Enola",
+  description:
+    "Perusahaan teknologi kesehatan: aplikasi RME klinik (Enola Clinica) dan manajemen klaim BPJS berbasis AI (Casemix Pintar).",
+  openGraph: {
+    title: "Enola.id",
+    description:
+      "Perusahaan teknologi kesehatan: aplikasi RME klinik (Enola Clinica) dan manajemen klaim BPJS berbasis AI (Casemix Pintar).",
+    images: ["https://enola.id/img/red-white.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Enola.id",
+    description:
+      "Perusahaan teknologi kesehatan: aplikasi RME klinik (Enola Clinica) dan manajemen klaim BPJS berbasis AI (Casemix Pintar).",
+    images: ["https://enola.id/img/red-white.png"],
+  },
+}
 
 export default function RootLayout({
   children,
@@ -18,9 +42,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="id"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn(
+        "antialiased",
+        fontMono.variable,
+        "font-sans",
+        poppins.variable
+      )}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>

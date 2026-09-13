@@ -13,6 +13,13 @@ function ThemeProvider({
       defaultTheme="system"
       enableSystem
       disableTransitionOnChange
+      // ponytail: Next 16 dev-mode React warns on executable inline scripts.
+      // Official pattern from dist/docs "preventing-flash-before-hydration":
+      // executable on server, inert data-block on client. suppressHydrationWarning
+      // (set by next-themes) covers the type mismatch.
+      scriptProps={{
+        type: typeof window === "undefined" ? "text/javascript" : "text/plain",
+      }}
       {...props}
     >
       <ThemeHotkey />

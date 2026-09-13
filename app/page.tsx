@@ -1,19 +1,31 @@
-import { Button } from "@/components/ui/button"
+import HeroSection from "@/components/hero-section-6"
+import FeaturesFour from "@/components/features-4"
+import FeaturesFive from "@/components/features-5"
+import AriaAI from "@/components/aria-ai"
+import Content from "@/components/content-2"
+import Pricing from "@/components/pricing-2"
+import Stats from "@/components/stats-2"
+import Team from "@/components/team-2"
+import CallToAction from "@/components/call-to-action-2"
+import Contact from "@/components/contact"
+import Faq from "@/components/faq"
+import Footer from "@/components/footer-2"
 
-export default function Page() {
+export default function CompanyProfilePage() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
+    <>
+      <HeroSection />
+      <FeaturesFour />
+      <FeaturesFive />
+      <AriaAI />
+      <Content />
+      <Pricing />
+      <Stats />
+      <Team />
+      <CallToAction />
+      <Contact />
+      <Faq />
+      <Footer />
+    </>
   )
 }

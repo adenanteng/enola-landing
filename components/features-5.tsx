@@ -9,7 +9,6 @@ import {
   ChevronDown,
   Clock,
   CloudDownload,
-  HardDriveDownload,
   History,
   Link2,
   ListChecks,
@@ -27,7 +26,12 @@ import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { Reveal } from "@/components/ui/motion-primitives/reveal"
 import { Button } from "@/components/ui/button"
-import { IconArrowUp, IconMicrophone, IconPaperclip } from "@tabler/icons-react"
+import {
+  IconArrowUp,
+  IconHeadset,
+  IconMicrophone,
+  IconPaperclip,
+} from "@tabler/icons-react"
 
 const features = [
   { id: "workflow-agents", label: "RME Terintegrasi" },
@@ -167,7 +171,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights["workflow-agents"]} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
+              <div className="relative flex aspect-square rounded-3xl border border-border bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <RMEIllustration />
               </div>
             </div>
@@ -194,7 +198,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights.alerts} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
+              <div className="relative flex aspect-square rounded-3xl border border-border bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <AIInputIllustration />
               </div>
             </div>
@@ -221,7 +225,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights.timeline} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
+              <div className="relative flex items-center aspect-square rounded-3xl border border-border bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <DynamicIslandIllustration />
               </div>
             </div>
@@ -248,7 +252,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights.integrations} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
+              <div className="relative flex aspect-square rounded-3xl border border-border bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <DownloadIllustration />
               </div>
             </div>
@@ -269,8 +273,8 @@ function RMEIllustration() {
         <div className="flex items-center justify-between p-2 pb-3">
           <div className="text-sm text-muted-foreground">Alur rawat jalan</div>
           <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
-            3 pasien
-          </span>
+          3 pasien
+        </span>
         </div>
         <div className="space-y-1">
           <div className="flex items-center gap-2 rounded-xl px-3 py-1.5 hover:bg-muted">
@@ -334,7 +338,7 @@ function DownloadIllustration() {
         render={<div />}
         nativeButton={false}
       >
-        <HardDriveDownload className="opacity-75" />
+        <IconHeadset className="opacity-75" />
         <span className="border-r pr-2">Bantuan</span>
         <ChevronDown className="opacity-50" />
       </Button>
@@ -393,7 +397,7 @@ function DynamicIslandIllustration() {
   return (
     <div
       aria-hidden
-      className="absolute inset-x-8 bottom-0 z-1 mx-auto mt-auto h-2/3 w-10/12 max-w-96 origin-bottom scale-95 rounded-t-[4rem] border border-border/50 mask-b-from-background px-4 pt-4"
+      className="absolute inset-x-0 bottom-0 z-1 mx-auto mt-auto h-2/3 w-full max-w-96 origin-bottom scale-95 rounded-t-[4rem] border border-border mask-b-from-background px-4 pt-4"
     >
       <div className="h-full overflow-hidden rounded-t-[3rem] bg-foreground/2 p-3 shadow-lg ring shadow-black/15 ring-foreground/10 dark:bg-white/5 dark:shadow-black/50 dark:ring-white/10">
         <div className="relative">

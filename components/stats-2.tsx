@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/motion-primitives/reveal"
 
 const stats = [
-  { count: 2, suffix: "", label: "Produk digital kesehatan" },
+  { text: "2", label: "Produk digital kesehatan" },
   { count: 14, suffix: "+", label: "Fasilitas kesehatan telah bergabung" },
   { text: "24/7", label: "Dukungan tim profesional" },
 ] as const

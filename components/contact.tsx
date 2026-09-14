@@ -100,7 +100,7 @@ export default function Contact() {
                 kebutuhan fasilitas Anda.
               </h2>
               <p className="mt-4 max-w-md text-lg text-balance text-muted-foreground">
-                Isi formulir di samping atau hubungi langsung — tim kami akan
+                Isi formulir di samping atau hubungi langsung tim kami akan
                 membantu menemukan solusi yang sesuai.
               </p>
 
@@ -225,18 +225,10 @@ export default function Contact() {
             </div>
 
             <div className="flex justify-end">
-              <span className="relative inline-flex w-full overflow-hidden rounded-full shadow-sm shadow-black/10">
-                <Button type="submit" className="w-full" disabled={sending}>
+                <Button type="submit" className="" disabled={sending}>
                   <IconSend className="size-4" />
                   {sending ? "Mengirim..." : "Kirim Pesan"}
                 </Button>
-                <BorderBeam
-                  size={40}
-                  duration={5}
-                  colorFrom="#f59e0b"
-                  colorTo="#fcd34d"
-                />
-              </span>
             </div>
 
             {status === "success" && (

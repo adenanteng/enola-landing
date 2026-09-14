@@ -17,19 +17,19 @@ export default function HeroSection() {
           <div className="relative pt-24 lg:pt-40">
             <div className="space-y-12 md:space-y-16">
               <div className="relative mx-auto max-w-7xl px-6">
-                <Reveal>
-                  <Link
-                    href="#product"
-                    className="flex w-fit items-center gap-2 font-medium"
-                  >
-                    <span>Enola</span>
-                    {/*<span className="text-muted-foreground">*/}
-                    {/*  Teknologi untuk Layanan Kesehatan*/}
-                    {/*</span>*/}
+                {/*<Reveal>*/}
+                {/*  <Link*/}
+                {/*    href="#product"*/}
+                {/*    className="flex w-fit items-center gap-2 font-medium"*/}
+                {/*  >*/}
+                {/*    <span>Enola</span>*/}
+                {/*    <span className="text-muted-foreground">*/}
+                {/*      Teknologi untuk Layanan Kesehatan*/}
+                {/*    </span>*/}
 
-                    <ArrowRight className="size-3.5" />
-                  </Link>
-                </Reveal>
+                {/*    <ArrowRight className="size-3.5" />*/}
+                {/*  </Link>*/}
+                {/*</Reveal>*/}
 
                 <div className="mt-8 grid items-end gap-4 md:grid-cols-2 md:gap-6">
                   <Reveal delay={0.08}>

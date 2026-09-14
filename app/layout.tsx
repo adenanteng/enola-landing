@@ -19,19 +19,19 @@ const fontMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Enola",
   description:
-    "Perusahaan teknologi kesehatan: aplikasi RME klinik (Enola Clinica) dan manajemen klaim BPJS berbasis AI (Casemix Pintar).",
+    "Teknologi untuk layanan kesehatan: aplikasi RME klinik dan manajemen klaim BPJS berbasis AI.",
   openGraph: {
     title: "Enola.id",
     description:
-      "Perusahaan teknologi kesehatan: aplikasi RME klinik (Enola Clinica) dan manajemen klaim BPJS berbasis AI (Casemix Pintar).",
-    images: ["https://enola.id/img/red-white.png"],
+      "Teknologi untuk layanan kesehatan: aplikasi RME klinik dan manajemen klaim BPJS berbasis AI.",
+    images: ["https://enola.id/img/enola-dark.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Enola.id",
     description:
-      "Perusahaan teknologi kesehatan: aplikasi RME klinik (Enola Clinica) dan manajemen klaim BPJS berbasis AI (Casemix Pintar).",
-    images: ["https://enola.id/img/red-white.png"],
+      "Teknologi untuk layanan kesehatan: aplikasi RME klinik dan manajemen klaim BPJS berbasis AI.",
+    images: ["https://enola.id/img/enola-dark.png"],
   },
 }
 

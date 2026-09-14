@@ -9,40 +9,35 @@ export default function TeamSection() {
             <span className="text-foreground">Dipercaya fasilitas.</span> <br />{" "}
             Cerita dari pengguna Enola.
           </h2>
-          <div className="flex flex-col gap-32 md:mx-auto xl:gap-44">
+          <div className="flex flex-col gap-10 md:mx-auto xl:gap-16">
             <p className="text-lg text-balance text-muted-foreground">
-              &quot;Kami hampir berpikir harus menyewa detektif untuk melacak
-              rekam medis pasien. Untungnya, dengan sistem ini, kami tidak perlu
-              lagi. Pekerjaan jadi lebih cepat dan rapi!&quot;{" "}
+              &quot;Dulu saya sering ragu apakah koding saya sudah sesuai
+              kaidah. Sekarang ketidaksesuaian ICD-10 terdeteksi lebih dulu,
+              sebelum klaim dikirim. Analisa datanya cepat dan hasilnya sesuai
+              dengan kondisi riil di lapangan. Top-up yang dulu sering terlewat
+              sekarang terdeteksi otomatis. Kerjaan koder jadi jauh lebih
+              terjamin.&quot;{" "}
             </p>
 
-            <div className="grid grid-cols-[auto_1fr] items-center gap-7">
+            <div className="grid grid-cols-[auto_1fr] items-center gap-4">
               <div className="relative">
                 <div className="relative size-10 overflow-hidden rounded-full shadow-md before:absolute before:inset-0 before:z-1 before:rounded-full before:border before:border-foreground/10">
                   <Image
-                    src="/img/landing/testi.jpeg"
-                    alt="Dr. Yahya Kholid"
+                    src="/img/arliyans.jpeg"
+                    alt="Arliyans"
                     width={52}
                     height={52}
-                    className="size-full object-cover grayscale"
-                  />
-                </div>
-
-                <div className="absolute inset-0 z-1 size-10 translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full shadow-lg shadow-black/6 before:absolute before:inset-0 before:z-2 before:rounded-full before:border before:border-foreground/10">
-                  <Image
-                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="fasilitas kesehatan"
-                    width={52}
-                    height={52}
-                    className="size-full object-cover object-top grayscale"
+                    className="size-full object-cover"
                   />
                 </div>
               </div>
 
               <div>
-                <h3 className="text-sm font-medium">Dr. Yahya Kholid</h3>
+                <h3 className="text-sm font-medium">
+                  Arliyans, Amd. RMIK., S.Ars
+                </h3>
                 <p className="text-sm text-muted-foreground">
-                  Kepala Klinik Sidowaras Walisongo
+                  Kepala Casemix RS Yukum Medical Centre
                 </p>
               </div>
             </div>

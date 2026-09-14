@@ -15,7 +15,7 @@ export default function StatsSection() {
             <p className="text-muted-foreground">Produk digital kesehatan</p>
           </div>
           <div className="space-y-3 border-t pt-6">
-            <div className="text-5xl font-semibold tracking-tight">4+</div>
+            <div className="text-5xl font-semibold tracking-tight">15+</div>
             <p className="text-muted-foreground">
               Fasilitas kesehatan telah bergabung
             </p>

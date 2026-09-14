@@ -3,8 +3,8 @@
 import {
   Activity,
   ArrowRightLeft,
-  ArrowUp,
   Bell,
+  Calculator,
   Calendar,
   ChevronDown,
   Clock,
@@ -14,10 +14,11 @@ import {
   Link2,
   ListChecks,
   Mail,
-  Mic2,
   MonitorDown,
+  Pill,
   Plug,
-  Plus,
+  Stethoscope,
+  User,
   Users,
   Zap,
   type LucideIcon,
@@ -25,6 +26,7 @@ import {
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
+import { IconArrowUp, IconMicrophone, IconPaperclip } from "@tabler/icons-react"
 
 const features = [
   { id: "workflow-agents", label: "RME Terintegrasi" },
@@ -162,16 +164,8 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights["workflow-agents"]} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3">
-                <div className="relative m-auto aspect-76/59 max-w-sm rounded-2xl bg-linear-to-b from-zinc-300 to-transparent p-px dark:from-zinc-700">
-                  <Image
-                    src="/img/landing/tagihan.png"
-                    className="hidden rounded-[15px] dark:block"
-                    alt="Modul tagihan Enola Clinica"
-                    width={1207}
-                    height={929}
-                  />
-                </div>
+              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
+                <RMEIllustration />
               </div>
             </div>
 
@@ -197,7 +191,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights.alerts} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3">
+              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <AIInputIllustration />
               </div>
             </div>
@@ -224,7 +218,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights.timeline} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3">
+              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <DynamicIslandIllustration />
               </div>
             </div>
@@ -251,7 +245,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights.integrations} />
               </div>
-              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-zinc-100 p-3 md:col-span-3">
+              <div className="relative flex aspect-square rounded-3xl border border-border/50 bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <DownloadIllustration />
               </div>
             </div>
@@ -259,6 +253,73 @@ export default function FeaturesSection() {
         </div>
       </div>
     </section>
+  )
+}
+
+function RMEIllustration() {
+  return (
+    <div
+      aria-hidden
+      className="absolute inset-8 z-1 m-auto h-fit max-w-sm scale-95"
+    >
+      <div className="h-fit rounded-3xl bg-card p-3 shadow-xl ring shadow-black/15 ring-foreground/15 dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/15">
+        <div className="flex items-center justify-between p-2 pb-3">
+          <div className="text-sm text-muted-foreground">
+            Alur rawat jalan
+          </div>
+          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+            3 pasien
+          </span>
+        </div>
+        <div className="space-y-1">
+          <div className="flex items-center gap-2 rounded-xl px-3 py-1.5 hover:bg-muted">
+            <div className="flex size-7 items-center justify-center rounded-full bg-primary/10 *:m-auto *:size-3.5">
+              <User className="text-primary" />
+            </div>
+            <div className="space-y-0.5">
+              <div className="text-xs font-medium">Anisa Putri</div>
+              <div className="text-xs text-muted-foreground">
+                Pendaftaran · 09.30
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl px-3 py-1.5 hover:bg-muted">
+            <div className="flex size-7 items-center justify-center rounded-full bg-primary/10 *:m-auto *:size-3.5">
+              <Stethoscope className="text-primary" />
+            </div>
+            <div className="space-y-0.5">
+              <div className="text-xs font-medium">Pemeriksaan dokter</div>
+              <div className="text-xs text-muted-foreground">
+                Rekam medis digital · 09.45
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl px-3 py-1.5 hover:bg-muted">
+            <div className="flex size-7 items-center justify-center rounded-full bg-primary/10 *:m-auto *:size-3.5">
+              <Pill className="text-primary" />
+            </div>
+            <div className="space-y-0.5">
+              <div className="text-xs font-medium">Resep #1024</div>
+              <div className="text-xs text-muted-foreground">
+                Farmasi · Disiapkan
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 rounded-xl px-3 py-1.5 hover:bg-muted">
+            <div className="flex size-7 items-center justify-center rounded-full bg-primary/10 *:m-auto *:size-3.5">
+              <Calculator className="text-primary" />
+            </div>
+            <div className="space-y-0.5">
+              <div className="text-xs font-medium">Pembayaran</div>
+              <div className="text-xs text-muted-foreground">Kasir · Lunas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -277,20 +338,20 @@ function DownloadIllustration() {
         <ChevronDown className="opacity-50" />
       </Button>
 
-      <div className="mt-3 min-w-52 rounded-2xl bg-white p-1 shadow-xl ring shadow-black/6.5 ring-black/6.5 *:cursor-pointer">
+      <div className="mt-3 min-w-52 rounded-2xl bg-card p-1 shadow-xl ring shadow-black/6.5 ring-black/6.5 *:cursor-pointer dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/10">
         <div className="peer flex gap-2 rounded-xl px-3 py-1.5 hover:bg-black/5">
-          <MonitorDown className="size-4 translate-y-0.5 text-black" />
+          <MonitorDown className="size-4 translate-y-0.5" />
           <div className="space-y-0.5">
-            <div className="text-xs font-medium text-black">Tim Lokal</div>
-            <div className="text-xs text-black/50">Siap 24/7</div>
+            <div className="text-xs font-medium">Tim Lokal</div>
+            <div className="text-xs text-muted-foreground">Siap 24/7</div>
           </div>
         </div>
 
         <div className="flex gap-2 rounded-xl px-3 py-1.5 not-peer-hover:bg-black/5">
-          <CloudDownload className="size-4 translate-y-0.5 text-black" />
+          <CloudDownload className="size-4 translate-y-0.5" />
           <div className="space-y-0.5">
-            <div className="text-xs font-medium text-black">Pelatihan</div>
-            <div className="text-xs text-black/50">Termasuk paket</div>
+            <div className="text-xs font-medium">Pelatihan</div>
+            <div className="text-xs text-muted-foreground">Termasuk paket</div>
           </div>
         </div>
       </div>
@@ -304,22 +365,22 @@ function AIInputIllustration() {
       aria-hidden
       className="absolute inset-8 z-1 m-auto h-fit max-w-sm scale-95"
     >
-      <div className="mt-auto h-fit rounded-3xl bg-card p-3 shadow-xl ring shadow-black/15 ring-foreground/15">
+      <div className="mt-auto h-fit rounded-3xl bg-card p-3 shadow-xl ring shadow-black/15 ring-foreground/15 dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/15">
         <div className="p-2 pb-3 text-sm text-muted-foreground">
-          Aria AI sedang membedah rekam medis...
+          Aria sedang membedah berkas klaim...
         </div>
         <div className="flex justify-between gap-3">
           <div className="flex items-center gap-1">
             <div className="flex size-7 cursor-pointer rounded-full *:m-auto *:size-4 hover:bg-muted">
-              <Plus />
+              <IconPaperclip />
             </div>
             <div className="flex size-7 cursor-pointer rounded-full *:m-auto *:size-4 hover:bg-muted">
-              <Mic2 />
+              <IconMicrophone />
             </div>
           </div>
 
           <div className="flex size-7 cursor-pointer rounded-full bg-foreground text-background *:m-auto *:size-4 hover:brightness-110">
-            <ArrowUp />
+            <IconArrowUp />
           </div>
         </div>
       </div>
@@ -333,13 +394,13 @@ function DynamicIslandIllustration() {
       aria-hidden
       className="absolute inset-x-8 bottom-0 z-1 mx-auto mt-auto h-2/3 w-10/12 max-w-96 origin-bottom scale-95 rounded-t-[4rem] border border-border/50 mask-b-from-background px-4 pt-4"
     >
-      <div className="h-full overflow-hidden rounded-t-[3rem] bg-foreground/2 p-3 shadow-lg ring shadow-black/15 ring-foreground/10">
+      <div className="h-full overflow-hidden rounded-t-[3rem] bg-foreground/2 p-3 shadow-lg ring shadow-black/15 ring-foreground/10 dark:bg-white/5 dark:shadow-black/50 dark:ring-white/10">
         <div className="relative">
-          <div className="relative rounded-[2.25rem] bg-card p-2 shadow-xl ring shadow-black/6.5 ring-foreground/10">
+          <div className="relative rounded-[2.25rem] bg-card p-2 shadow-xl ring shadow-black/6.5 ring-foreground/10 dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/10">
             <div className="flex gap-2">
               <div className="relative size-18 overflow-hidden rounded-[1.75rem] shadow-md before:absolute before:inset-0 before:rounded-[1.75rem] before:border before:border-black/20">
                 <Image
-                  src="https://images.unsplash.com/photo-1782366951390-d6798e902db7?q=80&w=1015&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="/avatar-placeholder.svg"
                   alt="pasien"
                   width={136}
                   height={136}

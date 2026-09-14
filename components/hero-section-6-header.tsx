@@ -11,7 +11,7 @@ const menuItems = [
   { name: "Produk", href: "#produk" },
   { name: "Pilar", href: "#pilar" },
   { name: "Aria AI", href: "#aria" },
-  { name: "FAQ", href: "#faq" },
+  // { name: "FAQ", href: "#faq" },
   { name: "Kontak", href: "#contact" },
 ]
 

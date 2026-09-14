@@ -23,9 +23,9 @@ export default function HeroSection() {
                     className="flex w-fit items-center gap-2 font-medium"
                   >
                     <span>Enola</span>
-                    <span className="text-muted-foreground">
-                      Teknologi untuk Layanan Kesehatan
-                    </span>
+                    {/*<span className="text-muted-foreground">*/}
+                    {/*  Teknologi untuk Layanan Kesehatan*/}
+                    {/*</span>*/}
 
                     <ArrowRight className="size-3.5" />
                   </Link>

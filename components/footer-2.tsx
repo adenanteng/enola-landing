@@ -1,9 +1,4 @@
 import Link from "next/link"
-import { Logo } from "@/components/logo"
-import { Gemini } from "@/components/ui/svgs/gemini"
-import { ClaudeAI } from "@/components/ui/svgs/claude-ai"
-import { Openai } from "@/components/ui/svgs/openai"
-import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 const footerLinks = [
@@ -18,7 +13,7 @@ const footerLinks = [
         href: "https://casemixpintar.id",
         label: "Casemix Pintar",
       },
-      { href: "#produk", label: "Semua Produk" },
+      { href: "#product", label: "Semua Produk" },
       // { href: "#faq", label: "FAQ" },
     ],
   },
@@ -28,7 +23,7 @@ const footerLinks = [
       { href: "#contact", label: "Hubungi Kami" },
       { href: "https://wa.me/6281278704532", label: "WhatsApp" },
       { href: "mailto:support@enola.id", label: "Email" },
-      // { href: "#produk", label: "Lihat Produk" },
+      // { href: "#product", label: "Lihat Produk" },
     ],
   },
   {

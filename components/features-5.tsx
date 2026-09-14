@@ -58,7 +58,7 @@ const featureHighlights: Record<
   ],
   integrations: [
     { icon: Plug, label: "Pelatihan tim fasilitas" },
-    { icon: Calendar, label: "Implementasi 2-4 minggu" },
+    { icon: Calendar, label: "Implementasi 1-2 minggu" },
     { icon: Link2, label: "Dukungan teknis 24/7" },
   ],
 }
@@ -117,7 +117,7 @@ export default function FeaturesSection() {
   }, [])
 
   return (
-    <section id="pilar" className="scroll-mt-24 py-16 md:py-20">
+    <section id="pillar" className="scroll-mt-24 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground">
           <span className="text-foreground">Satu ekosistem.</span> Empat pilar

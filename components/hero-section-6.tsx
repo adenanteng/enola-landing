@@ -16,7 +16,7 @@ export default function HeroSection() {
             <div className="space-y-12 md:space-y-16">
               <div className="relative mx-auto max-w-7xl px-6">
                 <Link
-                  href="#produk"
+                  href="#product"
                   className="flex w-fit items-center gap-2 font-medium"
                 >
                   <span>Enola</span>
@@ -41,7 +41,7 @@ export default function HeroSection() {
                       <Button
                         className="w-fit"
                         nativeButton={false}
-                        render={<Link href="#produk">Lihat Produk</Link>}
+                        render={<Link href="#product">Lihat Produk</Link>}
                       />
                       <Button
                         variant="outline"

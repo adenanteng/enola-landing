@@ -8,8 +8,8 @@ import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 import React from "react"
 
 const menuItems = [
-  { name: "Produk", href: "#produk" },
-  { name: "Pilar", href: "#pilar" },
+  { name: "Produk", href: "#product" },
+  { name: "Pilar", href: "#pillar" },
   { name: "Aria AI", href: "#aria" },
   // { name: "FAQ", href: "#faq" },
   { name: "Kontak", href: "#contact" },

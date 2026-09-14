@@ -2,18 +2,63 @@
 import Link from "next/link"
 import { Logo } from "@/components/logo"
 import { X } from "lucide-react"
+import { useTheme } from "next-themes"
 import { Button } from "@/components/ui/button"
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler"
 import React from "react"
 
 const menuItems = [
   { name: "Produk", href: "#produk" },
   { name: "Pilar", href: "#pilar" },
+  { name: "Aria AI", href: "#aria" },
   { name: "FAQ", href: "#faq" },
   { name: "Kontak", href: "#contact" },
 ]
 
+function ThemeToggler() {
+  const { resolvedTheme, setTheme } = useTheme()
+  // next-themes resolvedTheme is undefined until mounted; render placeholder
+  // to avoid hydration mismatch on the icon
+  const mounted = React.useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false
+  )
+
+  return (
+    <AnimatedThemeToggler
+      theme={mounted && resolvedTheme === "dark" ? "dark" : "light"}
+      onThemeChange={setTheme}
+      aria-label="Toggle theme"
+      className="flex size-9 items-center justify-center rounded-full border bg-background text-foreground duration-150 hover:bg-accent [&_svg]:size-4"
+    />
+  )
+}
+
 export const HeroHeader = () => {
   const [menuState, setMenuState] = React.useState(false)
+  const [activeSection, setActiveSection] = React.useState<string | null>(null)
+
+  // scroll-spy: active = last section whose top crossed 35% from viewport top.
+  // Uses a scroll listener (not IntersectionObserver) because ratio-based
+  // observation misses very tall sections like #pilar.
+  React.useEffect(() => {
+    const onScroll = () => {
+      const line = window.innerHeight * 0.35
+      let current: string | null = null
+      for (const item of menuItems) {
+        const element = document.getElementById(item.href.slice(1))
+        if (element && element.getBoundingClientRect().top <= line) {
+          current = item.href
+        }
+      }
+      setActiveSection(current)
+    }
+
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   React.useEffect(() => {
     if (!menuState) return
@@ -49,9 +94,7 @@ export const HeroHeader = () => {
                 aria-label="home"
                 className="flex items-center space-x-2"
               >
-                <span className="inline-flex items-center rounded-xl bg-foreground p-2 text-background">
-                  <Logo />
-                </span>
+                <Logo />
               </Link>
 
               <button
@@ -76,7 +119,11 @@ export const HeroHeader = () => {
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className="block text-muted-foreground duration-150 hover:text-accent-foreground"
+                        className={
+                          activeSection === item.href
+                            ? "block text-primary duration-150"
+                            : "block text-muted-foreground duration-150 hover:text-accent-foreground"
+                        }
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -94,7 +141,11 @@ export const HeroHeader = () => {
                       <Link
                         href={item.href}
                         onClick={() => setMenuState(false)}
-                        className="block py-3 text-2xl font-medium text-foreground"
+                        className={
+                          activeSection === item.href
+                            ? "block py-3 text-2xl font-medium text-primary"
+                            : "block py-3 text-2xl font-medium text-foreground"
+                        }
                       >
                         <span>{item.name}</span>
                       </Link>
@@ -102,7 +153,8 @@ export const HeroHeader = () => {
                   ))}
                 </ul>
               </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:items-center sm:gap-3 sm:space-y-0 md:w-fit">
+                <ThemeToggler />
                 <Button
                   size="sm"
                   nativeButton={false}

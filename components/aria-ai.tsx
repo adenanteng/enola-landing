@@ -34,7 +34,10 @@ const highlights = [
 
 export default function AriaAI() {
   return (
-    <section className="py-16 md:py-20">
+    <section
+      id="aria"
+      className="scroll-mt-24 bg-muted/50 py-16 md:py-20"
+    >
       <div className="mx-auto max-w-7xl px-6">
         <Card className="p-8 shadow-xl md:p-12">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">

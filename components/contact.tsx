@@ -146,17 +146,9 @@ export default function Contact() {
               />
             </div>
 
-            <Button
-              type="submit"
-              className="w-full"
-              disabled={sending}
-              nativeButton={false}
-              render={
-                <button type="submit">
-                  {sending ? "Mengirim..." : "Kirim"}
-                </button>
-              }
-            />
+            <Button type="submit" className="w-full" disabled={sending}>
+              {sending ? "Mengirim..." : "Kirim"}
+            </Button>
 
             {status === "success" && (
               <p className="rounded-lg border border-primary/30 bg-primary/10 px-4 py-3 text-sm">

@@ -5,22 +5,24 @@ import Link from "next/link"
 
 const products = [
   {
-    name: "Enola Clinica",
-    tagline: "Aplikasi RME untuk klinik",
-    description:
-      "Rawat jalan, farmasi, kasir, hingga rekam medis digital dalam satu platform yang terintegrasi.",
-    href: "https://enola.up.railway.app",
-    image: "/img/landing/tagihan.png",
-    alt: "Tampilan aplikasi Enola Clinica",
-  },
-  {
     name: "Casemix Pintar",
     tagline: "Manajemen klaim BPJS berbasis AI",
     description:
       "Verifikasi otomatis, analisis kualitas klaim, dan monitoring dispute dengan bantuan Aria AI.",
     href: "https://casemixpintar.id",
-    image: "/img/casemix/management.png",
+    image:
+      "https://images.unsplash.com/photo-1630893795974-f4e2fa294391?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Tampilan aplikasi Casemix Pintar",
+  },
+  {
+    name: "Enola Clinica",
+    tagline: "Aplikasi RME untuk klinik",
+    description:
+      "Rawat jalan, farmasi, kasir, hingga rekam medis digital dalam satu platform yang terintegrasi.",
+    href: "https://enola.up.railway.app",
+    image:
+      "https://images.unsplash.com/photo-1630893795974-f4e2fa294391?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    alt: "Tampilan aplikasi Enola Clinica",
   },
 ]
 

@@ -21,7 +21,7 @@ export default function HeroSection() {
                 >
                   <span>Enola</span>
                   <span className="text-muted-foreground">
-                    Perusahaan Teknologi Kesehatan
+                    Teknologi untuk Layanan Kesehatan
                   </span>
 
                   <ArrowRight className="size-3.5" />
@@ -56,15 +56,15 @@ export default function HeroSection() {
 
               <div className="mx-auto max-w-7xl max-xl:px-2">
                 <div className="relative aspect-square overflow-hidden rounded-3xl bg-muted md:aspect-5/3 lg:aspect-video">
-                  <div className="absolute top-4 left-4 z-10 min-w-4xl rounded-2xl bg-background p-2 shadow-lg ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground lg:top-16 lg:left-16 lg:min-w-5xl xl:min-w-7xl">
+                  <div className="absolute top-4 left-4 z-10 min-w-4xl rounded-3xl bg-background p-2 shadow-lg ring ring-foreground/6.5 before:absolute before:-inset-px before:z-10 before:size-56 before:rounded-tl-2xl before:border-t before:border-l before:border-foreground/10 before:mask-radial-[100%_60%] before:mask-radial-from-65% before:mask-radial-at-top-left before:ring-foreground lg:top-16 lg:left-16 lg:min-w-5xl xl:min-w-7xl">
                     <div
                       aria-hidden
                       className="absolute inset-0 z-1 rounded-2xl bg-foreground/2"
                     />
                     <Image
-                      className="relative aspect-15/8 rounded-2xl bg-background"
-                      src="/img/landing/hero.png"
-                      alt="Tampilan aplikasi Enola Clinica"
+                      className="relative rounded-2xl bg-background"
+                      src="/img/casemix-pintar-dashboard.svg"
+                      alt="casemix-pintar-dashboard"
                       width="2700"
                       height="1440"
                       priority

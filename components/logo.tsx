@@ -5,11 +5,11 @@ import { cn } from "@/lib/utils"
 export const Logo = ({ className }: { className?: string }) => {
   return (
     <Image
-      src="/img/red-white.svg"
+      src="/img/enola-dark.svg"
       alt="Enola"
       width={120}
       height={32}
-      className={cn("h-7 w-auto", className)}
+      className={cn("h-7 w-auto dark:invert", className)}
       priority
     />
   )
@@ -18,11 +18,11 @@ export const Logo = ({ className }: { className?: string }) => {
 export const LogoIcon = ({ className }: { className?: string }) => {
   return (
     <Image
-      src="/img/red-white.svg"
+      src="/img/enola-dark.svg"
       alt="Enola"
       width={120}
       height={32}
-      className={cn("h-7 w-auto", className)}
+      className={cn("h-7 w-auto dark:invert", className)}
     />
   )
 }

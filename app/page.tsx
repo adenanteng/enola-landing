@@ -23,8 +23,8 @@ export default function CompanyProfilePage() {
       <Stats />
       <Team />
       <CallToAction />
-      <Contact />
       <Faq />
+      <Contact />
       <Footer />
     </>
   )

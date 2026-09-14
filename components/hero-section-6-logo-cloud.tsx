@@ -5,10 +5,11 @@ import { InfiniteSlider } from "@/components/ui/motion-primitives/infinite-slide
 import Image from "next/image"
 
 const logos = [
-  { name: "RS Darussyifa", src: "/img/logo-darussyifa.png" },
-  { name: "Fyglow", src: "/img/logo-fyglow.png" },
-  { name: "Klinik Sidowaras", src: "/img/logo-sidowaras.png" },
-  { name: "WSC", src: "/img/logo-wsc.png" },
+  { name: "RS Bhakti Husada", src: "/img/client/RSBH_REMBANG_LOGO.png" },
+  { name: "RS Mitra Husada Pringsewu", src: "/img/client/RSMH_PRINGSEWU_LOGO.png" },
+  { name: "KSUD Pringsewu", src: "/img/client/RSUD_PRINGSEWU_LOGO.png" },
+  { name: "RSUD Ahmad Yani Metro", src: "/img/client/RSUDAY_METRO_LOGO.png" },
+  { name: "RS Yukum Medical Centre", src: "/img/client/RSYMC_YUKUM_LOGO.png" },
 ]
 
 function Logos() {

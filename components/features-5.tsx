@@ -401,7 +401,7 @@ function DynamicIslandIllustration() {
             <div className="flex gap-2">
               <div className="relative size-18 overflow-hidden rounded-[1.75rem] shadow-md before:absolute before:inset-0 before:rounded-[1.75rem] before:border before:border-black/20">
                 <Image
-                  src="/avatar-placeholder.svg"
+                  src="/img/avatar-placeholder.svg"
                   alt="pasien"
                   width={136}
                   height={136}

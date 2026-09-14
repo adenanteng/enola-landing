@@ -25,6 +25,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
+import { Reveal } from "@/components/ui/motion-primitives/reveal"
 import { Button } from "@/components/ui/button"
 import { IconArrowUp, IconMicrophone, IconPaperclip } from "@tabler/icons-react"
 
@@ -119,10 +120,12 @@ export default function FeaturesSection() {
   return (
     <section id="pillar" className="scroll-mt-24 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground">
-          <span className="text-foreground">Satu ekosistem.</span> Empat pilar
-          layanan Enola.
-        </h2>
+        <Reveal>
+          <h2 className="max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground">
+            <span className="text-foreground">Satu ekosistem.</span> Empat pilar
+            layanan Enola.
+          </h2>
+        </Reveal>
         <div className="mt-16 grid gap-6 md:mt-32 lg:grid-cols-[auto_1fr]">
           <div className="sticky top-24 h-fit w-56 max-lg:hidden">
             <div className="text-sm text-muted-foreground">Pilar</div>
@@ -141,7 +144,7 @@ export default function FeaturesSection() {
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-16 md:gap-32">
+          <Reveal className="flex flex-col gap-16 md:gap-32" delay={0.1}>
             <div
               ref={(element) => {
                 sectionRefs.current["workflow-agents"] = element
@@ -249,7 +252,7 @@ export default function FeaturesSection() {
                 <DownloadIllustration />
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
@@ -264,9 +267,7 @@ function RMEIllustration() {
     >
       <div className="h-fit rounded-3xl bg-card p-3 shadow-xl ring shadow-black/15 ring-foreground/15 dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/15">
         <div className="flex items-center justify-between p-2 pb-3">
-          <div className="text-sm text-muted-foreground">
-            Alur rawat jalan
-          </div>
+          <div className="text-sm text-muted-foreground">Alur rawat jalan</div>
           <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
             3 pasien
           </span>

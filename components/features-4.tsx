@@ -1,4 +1,10 @@
 import { Card } from "@/components/ui/card"
+import { BorderBeam } from "@/components/ui/border-beam"
+import {
+  Reveal,
+  Stagger,
+  StaggerItem,
+} from "@/components/ui/motion-primitives/reveal"
 import { ArrowUpRight } from "lucide-react"
 import {
   IconBell,
@@ -27,10 +33,30 @@ const products = [
 ]
 
 const clinicaStats = [
-  { label: "Kunjungan Rawat Jalan", value: "134", accent: "text-emerald-600 dark:text-emerald-400", bar: "bg-emerald-500" },
-  { label: "Kunjungan Rawat Inap", value: "56", accent: "text-blue-600 dark:text-blue-400", bar: "bg-blue-500" },
-  { label: "Pasien IGD", value: "3", accent: "text-red-600 dark:text-red-400", bar: "bg-red-500" },
-  { label: "Kunjungan Kecantikan", value: "5", accent: "text-blue-600 dark:text-blue-400", bar: "bg-blue-500" },
+  {
+    label: "Kunjungan Rawat Jalan",
+    value: "134",
+    accent: "text-emerald-600 dark:text-emerald-400",
+    bar: "bg-emerald-500",
+  },
+  {
+    label: "Kunjungan Rawat Inap",
+    value: "56",
+    accent: "text-blue-600 dark:text-blue-400",
+    bar: "bg-blue-500",
+  },
+  {
+    label: "Pasien IGD",
+    value: "3",
+    accent: "text-red-600 dark:text-red-400",
+    bar: "bg-red-500",
+  },
+  {
+    label: "Kunjungan Kecantikan",
+    value: "5",
+    accent: "text-blue-600 dark:text-blue-400",
+    bar: "bg-blue-500",
+  },
 ]
 
 function ClinicaIllustration() {
@@ -97,13 +123,21 @@ export default function Features() {
   return (
     <section id="product" className="scroll-mt-24 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground">
-          <span className="text-foreground">Dua produk, satu tujuan.</span>{" "}
-          <br /> Digitalisasi layanan kesehatan Anda.
-        </h2>
-        <div className="mt-8 grid gap-6 md:mt-16 md:grid-cols-2 md:gap-3 lg:grid-cols-3">
+        <Reveal>
+          <h2 className="max-w-4xl text-4xl font-medium tracking-tight text-balance text-muted-foreground">
+            <span className="text-foreground">Dua produk, satu tujuan.</span>{" "}
+            <br /> Digitalisasi layanan kesehatan Anda.
+          </h2>
+        </Reveal>
+        <Stagger className="mt-8 grid gap-6 md:mt-16 md:grid-cols-2 md:gap-3 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <Card className="relative overflow-hidden ring-0 after:pointer-events-none after:absolute after:inset-0 after:rounded-xl after:border after:border-foreground/5 max-md:aspect-auto md:aspect-3/2">
+            <Card className="relative h-full overflow-hidden ring-0 duration-200 after:pointer-events-none after:absolute after:inset-0 after:rounded-xl after:border after:border-foreground/5 max-md:aspect-auto md:aspect-3/2 md:hover:-translate-y-1">
+              <BorderBeam
+                size={80}
+                duration={8}
+                colorFrom="#f59e0b"
+                colorTo="#fcd34d"
+              />
               <div className="relative z-10 flex max-w-md flex-col gap-4 p-8">
                 <p className="text-lg text-balance text-foreground/75">
                   <span className="font-medium text-foreground">
@@ -134,32 +168,41 @@ export default function Features() {
             </Card>
           </div>
 
-          <Card className="relative h-full min-h-96 overflow-hidden bg-zinc-100 dark:bg-white/5">
-            <div className="relative z-10 flex max-w-sm flex-col gap-4 p-8">
-              <p className="text-lg text-balance text-foreground/75">
-                <span className="font-medium text-foreground">
-                  {products[1].name}.{" "}
-                </span>{" "}
-                {products[1].tagline}. {products[1].description}
-              </p>
-              <Link
-                href={products[1].href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-foreground duration-150 hover:text-primary"
-              >
-                Kunjungi Platform <ArrowUpRight className="size-4" />
-              </Link>
-            </div>
+          <StaggerItem className="h-full">
+            <Card className="relative h-full min-h-96 overflow-hidden bg-zinc-100 duration-200 hover:-translate-y-1 dark:bg-white/5">
+              <BorderBeam
+                size={80}
+                duration={8}
+                delay={2}
+                colorFrom="#f59e0b"
+                colorTo="#fcd34d"
+              />
+              <div className="relative z-10 flex max-w-sm flex-col gap-4 p-8">
+                <p className="text-lg text-balance text-foreground/75">
+                  <span className="font-medium text-foreground">
+                    {products[1].name}.{" "}
+                  </span>{" "}
+                  {products[1].tagline}. {products[1].description}
+                </p>
+                <Link
+                  href={products[1].href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-foreground duration-150 hover:text-primary"
+                >
+                  Kunjungi Platform <ArrowUpRight className="size-4" />
+                </Link>
+              </div>
 
-            <div
-              aria-hidden
-              className="relative mx-auto mt-2 h-80 w-10/12 origin-bottom overflow-hidden rounded-t-[3rem] border-t border-black/5 bg-white shadow-xl ring shadow-black/6.5 ring-black/10 max-md:rounded-b-none md:absolute md:inset-x-8 md:bottom-0 md:mx-0 md:mt-0 md:h-2/3 md:scale-95 dark:border-white/10 dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/10"
-            >
-              <ClinicaIllustration />
-            </div>
-          </Card>
-        </div>
+              <div
+                aria-hidden
+                className="relative mx-auto mt-2 h-80 w-10/12 origin-bottom overflow-hidden rounded-t-[3rem] border-t border-black/5 bg-white shadow-xl ring shadow-black/6.5 ring-black/10 max-md:rounded-b-none md:absolute md:inset-x-8 md:bottom-0 md:mx-0 md:mt-0 md:h-2/3 md:scale-95 dark:border-white/10 dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/10"
+              >
+                <ClinicaIllustration />
+              </div>
+            </Card>
+          </StaggerItem>
+        </Stagger>
       </div>
     </section>
   )

@@ -6,13 +6,16 @@ import {
   IconRefresh,
   IconSparkles,
 } from "@tabler/icons-react"
+import { BorderBeam } from "@/components/ui/border-beam"
 import { Card } from "@/components/ui/card"
+import { Reveal } from "@/components/ui/motion-primitives/reveal"
 
 const highlights = [
   {
     icon: IconBrain,
     title: "Analisis Cerdas",
-    description: "Mengekstrak informasi penting dari rekam medis secara instan.",
+    description:
+      "Mengekstrak informasi penting dari rekam medis secara instan.",
   },
   {
     icon: IconCode,
@@ -58,9 +61,7 @@ function AriaChatIllustration() {
             <div className="mt-0.5 text-muted-foreground">
               Appendisitis akut tanpa komplikasi.
             </div>
-            <div className="mt-0.5 text-muted-foreground">
-              ICD-9 CM: 47.09
-            </div>
+            <div className="mt-0.5 text-muted-foreground">ICD-9 CM: 47.09</div>
           </div>
           <div className="flex items-center gap-1.5 pl-1">
             <span className="size-1.5 animate-bounce rounded-full bg-muted-foreground/50" />
@@ -82,46 +83,54 @@ function AriaChatIllustration() {
 
 export default function AriaAI() {
   return (
-    <section
-      id="aria"
-      className="scroll-mt-24 bg-muted/50 py-16 md:py-20"
-    >
+    <section id="aria" className="scroll-mt-24 bg-muted/50 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <Card className="p-8 shadow-xl md:p-12 rounded-4xl">
-          <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-            <div className="order-2 flex justify-center lg:order-1">
-              <AriaChatIllustration />
-            </div>
+        <Reveal scale={0.98}>
+          <Card className="relative overflow-hidden rounded-4xl p-8 shadow-xl duration-200 hover:-translate-y-1 md:p-12">
+            <BorderBeam
+              size={100}
+              duration={9}
+              colorFrom="#f59e0b"
+              colorTo="#fcd34d"
+            />
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+              <div className="order-2 flex justify-center lg:order-1">
+                <AriaChatIllustration />
+              </div>
 
-            <div className="order-1 lg:order-2">
-              <h3 className="text-3xl font-medium tracking-tight md:text-4xl">
-                Kenalkan, Aria AI
-              </h3>
-              <p className="mt-4 text-balance text-muted-foreground">
-                Bukan sekadar sistem biasa. Aria dirancang khusus untuk memahami
-                kompleksitas klaim BPJS, membedah rekam medis, dan memberikan
-                rekomendasi koding yang akurat berdasarkan regulasi terbaru.
-              </p>
+              <div className="order-1 lg:order-2">
+                <h3 className="text-3xl font-medium tracking-tight md:text-4xl">
+                  Kenalkan, Aria AI
+                </h3>
+                <p className="mt-4 text-balance text-muted-foreground">
+                  Bukan sekadar sistem biasa. Aria dirancang khusus untuk
+                  memahami kompleksitas klaim BPJS, membedah rekam medis, dan
+                  memberikan rekomendasi koding yang akurat berdasarkan regulasi
+                  terbaru.
+                </p>
 
-              <div className="mt-8 grid gap-6 sm:grid-cols-2">
-                {highlights.map((item) => (
-                  <div key={item.title} className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2">
-                      <item.icon
-                        className="size-4 text-primary"
-                        stroke={1.75}
-                      />
-                      <span className="text-sm font-medium">{item.title}</span>
+                <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                  {highlights.map((item) => (
+                    <div key={item.title} className="flex flex-col gap-2">
+                      <div className="flex items-center gap-2">
+                        <item.icon
+                          className="size-4 text-primary"
+                          stroke={1.75}
+                        />
+                        <span className="text-sm font-medium">
+                          {item.title}
+                        </span>
+                      </div>
+                      <p className="text-sm text-muted-foreground">
+                        {item.description}
+                      </p>
                     </div>
-                    <p className="text-sm text-muted-foreground">
-                      {item.description}
-                    </p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </Card>
+          </Card>
+        </Reveal>
       </div>
     </section>
   )

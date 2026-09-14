@@ -1,8 +1,10 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { BorderBeam } from "@/components/ui/border-beam"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Reveal } from "@/components/ui/motion-primitives/reveal"
 import {
   Combobox,
   ComboboxContent,
@@ -29,8 +31,7 @@ const jabatanOptions = [
 ]
 
 // ponytail: inlined into the client bundle at build time — value is public by design
-const WEB3FORMS_ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? ""
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? ""
 
 const contactChannels = [
   {
@@ -92,43 +93,45 @@ export default function Contact() {
     <section id="contact" className="scroll-mt-24 py-16 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-          <div>
-            <h2 className="max-w-md text-4xl font-medium tracking-tight text-balance text-muted-foreground lg:text-5xl">
-              <span className="text-foreground">Hubungi kami.</span> Ceritakan
-              kebutuhan fasilitas Anda.
-            </h2>
-            <p className="mt-4 max-w-md text-lg text-balance text-muted-foreground">
-              Isi formulir di samping atau hubungi langsung tim kami akan
-              membantu menemukan solusi yang sesuai.
-            </p>
+          <Reveal>
+            <div>
+              <h2 className="max-w-md text-4xl font-medium tracking-tight text-balance text-muted-foreground lg:text-5xl">
+                <span className="text-foreground">Hubungi kami.</span> Ceritakan
+                kebutuhan fasilitas Anda.
+              </h2>
+              <p className="mt-4 max-w-md text-lg text-balance text-muted-foreground">
+                Isi formulir di samping atau hubungi langsung — tim kami akan
+                membantu menemukan solusi yang sesuai.
+              </p>
 
-            <div className="mt-8 space-y-3">
-              {contactChannels.map((channel) => (
-                <a
-                  key={channel.label}
-                  href={channel.href}
-                  {...(channel.external
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
-                  className="flex items-center gap-4 rounded-2xl border bg-card p-4 duration-200 hover:border-primary/40"
-                >
-                  <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border bg-background">
-                    <channel.icon
-                      className="size-4 text-primary"
-                      stroke={1.75}
-                    />
-                  </div>
-                  <div>
-                    <div className="text-xs text-muted-foreground">
-                      {channel.label}
+              <div className="mt-8 space-y-3">
+                {contactChannels.map((channel) => (
+                  <a
+                    key={channel.label}
+                    href={channel.href}
+                    {...(channel.external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className="flex items-center gap-4 rounded-2xl border bg-card p-4 duration-200 hover:border-primary/40"
+                  >
+                    <div className="flex size-10 shrink-0 items-center justify-center rounded-xl border bg-background">
+                      <channel.icon
+                        className="size-4 text-primary"
+                        stroke={1.75}
+                      />
                     </div>
-                    <div className="text-sm font-medium">{channel.value}</div>
-                  </div>
-                  <IconArrowUpRight className="ml-auto size-4 text-muted-foreground" />
-                </a>
-              ))}
+                    <div>
+                      <div className="text-xs text-muted-foreground">
+                        {channel.label}
+                      </div>
+                      <div className="text-sm font-medium">{channel.value}</div>
+                    </div>
+                    <IconArrowUpRight className="ml-auto size-4 text-muted-foreground" />
+                  </a>
+                ))}
+              </div>
             </div>
-          </div>
+          </Reveal>
 
           <form
             onSubmit={handleSubmit}
@@ -222,10 +225,18 @@ export default function Contact() {
             </div>
 
             <div className="flex justify-end">
-              <Button type="submit" className="" disabled={sending}>
-                <IconSend className="size-4" />
-                {sending ? "Mengirim..." : "Kirim Pesan"}
-              </Button>
+              <span className="relative inline-flex w-full overflow-hidden rounded-full shadow-sm shadow-black/10">
+                <Button type="submit" className="w-full" disabled={sending}>
+                  <IconSend className="size-4" />
+                  {sending ? "Mengirim..." : "Kirim Pesan"}
+                </Button>
+                <BorderBeam
+                  size={40}
+                  duration={5}
+                  colorFrom="#f59e0b"
+                  colorTo="#fcd34d"
+                />
+              </span>
             </div>
 
             {status === "success" && (

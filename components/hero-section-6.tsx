@@ -40,7 +40,7 @@ export default function HeroSection() {
                   <div className="mx-auto flex max-w-md flex-col gap-6">
                     <Reveal delay={0.16}>
                       <p className="text-lg text-balance text-muted-foreground">
-                        Menghadirkan solusi digital terintegrasi — dari RME
+                        Menghadirkan solusi digital terintegrasi. Mulai dari RME
                         klinik hingga manajemen klaim BPJS berbasis AI.
                       </p>
                     </Reveal>

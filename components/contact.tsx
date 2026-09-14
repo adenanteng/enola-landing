@@ -225,10 +225,10 @@ export default function Contact() {
             </div>
 
             <div className="flex justify-end">
-                <Button type="submit" className="" disabled={sending}>
-                  <IconSend className="size-4" />
-                  {sending ? "Mengirim..." : "Kirim Pesan"}
-                </Button>
+              <Button type="submit" className="" disabled={sending}>
+                <IconSend className="size-4" />
+                {sending ? "Mengirim..." : "Kirim Pesan"}
+              </Button>
             </div>
 
             {status === "success" && (

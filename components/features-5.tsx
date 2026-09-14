@@ -225,7 +225,7 @@ export default function FeaturesSection() {
                 </div>
                 <FeatureList items={featureHighlights.timeline} />
               </div>
-              <div className="relative flex items-center aspect-square rounded-3xl border border-border bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
+              <div className="relative flex aspect-square items-center rounded-3xl border border-border bg-foreground/2 p-3 md:col-span-3 dark:bg-white/5">
                 <DynamicIslandIllustration />
               </div>
             </div>
@@ -273,8 +273,8 @@ function RMEIllustration() {
         <div className="flex items-center justify-between p-2 pb-3">
           <div className="text-sm text-muted-foreground">Alur rawat jalan</div>
           <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
-          3 pasien
-        </span>
+            3 pasien
+          </span>
         </div>
         <div className="space-y-1">
           <div className="flex items-center gap-2 rounded-xl px-3 py-1.5 hover:bg-muted">

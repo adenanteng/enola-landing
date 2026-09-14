@@ -158,7 +158,7 @@ export default function Features() {
               {/* ponytail: tune translate/width to adjust the desktop crop */}
               <div className="relative z-1 rounded-2xl px-6 pb-6 md:absolute md:right-0 md:bottom-0 md:w-[35rem] md:translate-x-1/10 md:-translate-y-1/10 md:px-0 md:pb-0">
                 <Image
-                  className="rounded-2xl"
+                  className="rounded-2xl shadow-lg"
                   src="/img/casemix-pintar-competency-chart.svg"
                   alt="Tampilan aplikasi Casemix Pintar"
                   width={694}

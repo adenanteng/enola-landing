@@ -156,13 +156,19 @@ export default function Features() {
               </div>
 
               {/* ponytail: tune translate/width to adjust the desktop crop */}
-              <div className="z-1 px-6 pb-6 md:absolute md:right-0 md:bottom-0 md:w-[55rem] md:translate-x-1/3 md:translate-y-1/5 md:px-0 md:pb-0">
+              <div className="relative z-1 rounded-2xl px-6 pb-6 md:absolute md:right-0 md:bottom-0 md:w-[35rem] md:translate-x-1/10 md:-translate-y-1/10 md:px-0 md:pb-0">
                 <Image
-                  src="/img/casemix-pintar-competency.svg"
+                  className="rounded-2xl"
+                  src="/img/casemix-pintar-competency-chart.svg"
                   alt="Tampilan aplikasi Casemix Pintar"
-                  width={1207}
-                  height={929}
-                  className="rounded-lg border border-2"
+                  width={694}
+                  height={413}
+                />
+                <BorderBeam
+                  size={80}
+                  duration={8}
+                  colorFrom="#f59e0b"
+                  colorTo="#fcd34d"
                 />
               </div>
             </Card>

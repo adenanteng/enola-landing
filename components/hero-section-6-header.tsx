@@ -97,22 +97,6 @@ export const HeroHeader = () => {
                 <Logo />
               </Link>
 
-              <button
-                onClick={() => setMenuState(!menuState)}
-                aria-label={menuState == true ? "Close Menu" : "Open Menu"}
-                className="relative z-20 block cursor-pointer after:absolute after:-inset-4 lg:hidden"
-              >
-                <div
-                  aria-hidden
-                  className="m-auto flex size-4.5 flex-col items-center justify-center gap-[7px] duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0"
-                >
-                  <span className="h-0.5 w-full rounded-full bg-foreground" />
-                  <span className="h-0.5 w-full rounded-full bg-foreground" />
-                </div>
-
-                <X className="absolute inset-0 m-auto size-6 translate-x-[-3px] scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
-              </button>
-
               <div className="max-lg:hidden">
                 <ul className="flex gap-8 text-sm">
                   {menuItems.map((item, index) => (
@@ -130,6 +114,25 @@ export const HeroHeader = () => {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div className="flex items-center gap-4 lg:hidden">
+                <ThemeToggler />
+                <button
+                  onClick={() => setMenuState(!menuState)}
+                  aria-label={menuState == true ? "Close Menu" : "Open Menu"}
+                  className="relative z-20 block cursor-pointer after:absolute after:-inset-4"
+                >
+                  <div
+                    aria-hidden
+                    className="m-auto flex size-4.5 flex-col items-center justify-center gap-[7px] duration-200 in-data-[state=active]:scale-0 in-data-[state=active]:rotate-180 in-data-[state=active]:opacity-0"
+                  >
+                    <span className="h-0.5 w-full rounded-full bg-foreground" />
+                    <span className="h-0.5 w-full rounded-full bg-foreground" />
+                  </div>
+
+                  <X className="absolute inset-0 m-auto size-6 translate-x-[-3px] scale-0 -rotate-180 opacity-0 duration-200 in-data-[state=active]:scale-100 in-data-[state=active]:rotate-0 in-data-[state=active]:opacity-100" />
+                </button>
               </div>
             </div>
 
@@ -154,12 +157,17 @@ export const HeroHeader = () => {
                 </ul>
               </div>
               <div className="flex w-full flex-col space-y-3 sm:flex-row sm:items-center sm:gap-3 sm:space-y-0 md:w-fit">
-                <ThemeToggler />
+                <div className="max-lg:hidden">
+                  <ThemeToggler />
+                </div>
                 <Button
                   size="sm"
                   nativeButton={false}
                   render={
-                    <Link href="#contact">
+                    <Link
+                      href="#contact"
+                      onClick={() => setMenuState(false)}
+                    >
                       <span>Hubungi Kami</span>
                     </Link>
                   }

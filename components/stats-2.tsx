@@ -7,7 +7,7 @@ import {
 
 const stats = [
   { text: "2", label: "Produk digital kesehatan" },
-  { count: 14, suffix: "+", label: "Fasilitas kesehatan telah bergabung" },
+  { count: 16, suffix: "+", label: "Fasilitas kesehatan mempercayai Enola" },
   { text: "24/7", label: "Dukungan tim profesional" },
 ] as const
 

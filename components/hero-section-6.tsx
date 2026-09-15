@@ -183,9 +183,15 @@ export default function HeroSection() {
                           </div>
                         </div>
                       </div>
+                      <BorderBeam
+                        borderWidth={2}
+                        size={80}
+                        duration={8}
+                        colorFrom="#f59e0b"
+                        colorTo="#fcd34d"
+                      />
                     </div>
                   </Reveal>
-
                   {/* Trust Marquee Card */}
                   <Reveal delay={0.4}>
                     <div className="relative overflow-hidden rounded-3xl border bg-card/60 py-8 shadow-lg backdrop-blur-xl">
@@ -197,6 +203,13 @@ export default function HeroSection() {
                           <Logos />
                         </InfiniteSlider>
                       </div>
+                      <BorderBeam
+                        borderWidth={2}
+                        size={80}
+                        duration={8}
+                        colorFrom="#f59e0b"
+                        colorTo="#fcd34d"
+                      />
                     </div>
                   </Reveal>
                 </div>

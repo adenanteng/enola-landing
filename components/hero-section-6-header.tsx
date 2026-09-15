@@ -164,10 +164,7 @@ export const HeroHeader = () => {
                   size="sm"
                   nativeButton={false}
                   render={
-                    <Link
-                      href="#contact"
-                      onClick={() => setMenuState(false)}
-                    >
+                    <Link href="#contact" onClick={() => setMenuState(false)}>
                       <span>Hubungi Kami</span>
                     </Link>
                   }

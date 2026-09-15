@@ -13,12 +13,10 @@ export default function TeamSection() {
             </h2>
             <div className="flex flex-col gap-10 md:mx-auto xl:gap-16">
               <p className="text-lg text-balance text-muted-foreground">
-                &quot;Dulu saya sering ragu apakah koding saya sudah sesuai
-                kaidah. Sekarang ketidaksesuaian ICD-10 terdeteksi lebih dulu,
-                sebelum klaim dikirim. Analisa datanya cepat dan hasilnya sesuai
-                dengan kondisi riil di lapangan. Top-up yang dulu sering
-                terlewat sekarang terdeteksi otomatis. Kerjaan koder jadi jauh
-                lebih terjamin.&quot;{" "}
+                &quot;Selama ini datanya sebenarnya sudah ada, cuma susah kalau
+                mau dianalisa satu-satu. Setelah pakai Casemix Pintar jadi lebih
+                kelihatan mana klaim yang perlu diperhatikan dan mana yang masih
+                bisa dioptimalkan.&quot;{" "}
               </p>
 
               <div className="grid grid-cols-[auto_1fr] items-center gap-4">

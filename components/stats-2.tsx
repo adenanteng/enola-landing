@@ -1,4 +1,3 @@
-import { CountUp } from "@/components/ui/motion-primitives/count-up"
 import {
   Reveal,
   Stagger,

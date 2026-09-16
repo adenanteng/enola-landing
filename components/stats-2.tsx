@@ -7,7 +7,7 @@ import {
 
 const stats = [
   { text: "2", label: "Produk digital kesehatan" },
-  { count: 16, suffix: "+", label: "Fasilitas kesehatan mempercayai Enola" },
+  { text: "16+", label: "Fasilitas kesehatan mempercayai Enola" },
   { text: "24/7", label: "Dukungan tim profesional" },
 ] as const
 
@@ -29,11 +29,11 @@ export default function StatsSection() {
             <StaggerItem key={stat.label}>
               <div className="space-y-3 border-t pt-6">
                 <div className="text-5xl font-semibold tracking-tight">
-                  {"count" in stat ? (
-                    <CountUp to={stat.count} suffix={stat.suffix} />
-                  ) : (
+                  {/*{"count" in stat ? (*/}
+                  {/*  <CountUp to={stat.count} suffix={stat.suffix} />*/}
+                  {/*) : (*/}
                     stat.text
-                  )}
+                  {/*)}*/}
                 </div>
                 <p className="text-muted-foreground">{stat.label}</p>
               </div>

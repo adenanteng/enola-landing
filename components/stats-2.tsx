@@ -31,7 +31,7 @@ export default function StatsSection() {
                   {/*{"count" in stat ? (*/}
                   {/*  <CountUp to={stat.count} suffix={stat.suffix} />*/}
                   {/*) : (*/}
-                    stat.text
+                  {stat.text}
                   {/*)}*/}
                 </div>
                 <p className="text-muted-foreground">{stat.label}</p>

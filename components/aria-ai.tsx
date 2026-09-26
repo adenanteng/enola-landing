@@ -9,6 +9,7 @@ import {
 import { BorderBeam } from "@/components/ui/border-beam"
 import { Card } from "@/components/ui/card"
 import { Reveal } from "@/components/ui/motion-primitives/reveal"
+import Image from "next/image"
 
 const highlights = [
   {
@@ -41,7 +42,8 @@ function AriaChatIllustration() {
       <div className="rounded-3xl bg-card p-4 shadow-xl ring shadow-black/10 ring-foreground/10 dark:bg-zinc-800 dark:shadow-black/50 dark:ring-white/10">
         <div className="flex items-center gap-3 border-b border-border/60 pb-3">
           <div className="relative flex size-9 items-center justify-center rounded-full bg-primary/10">
-            <IconSparkles className="size-4 text-primary" stroke={1.75} />
+            {/*<IconSparkles className="size-4 text-primary" stroke={1.75} />*/}
+            <Image src='/img/aria.svg' alt='Aria' width={20} height={20} className='dark:invert' />
             <span className="absolute -right-0.5 -bottom-0.5 size-2.5 rounded-full bg-emerald-500 ring-2 ring-card" />
           </div>
           <div>

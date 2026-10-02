@@ -190,14 +190,14 @@ export default function Features() {
                   </span>{" "}
                   {products[1].tagline}. {products[1].description}
                 </p>
-                <Link
-                  href={products[1].href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-foreground duration-150 hover:text-primary"
-                >
-                  Kunjungi Platform <ArrowUpRight className="size-4" />
-                </Link>
+                {/*<Link*/}
+                {/*  href={products[1].href}*/}
+                {/*  target="_blank"*/}
+                {/*  rel="noopener noreferrer"*/}
+                {/*  className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-foreground duration-150 hover:text-primary"*/}
+                {/*>*/}
+                {/*  Kunjungi Platform <ArrowUpRight className="size-4" />*/}
+                {/*</Link>*/}
               </div>
 
               <div

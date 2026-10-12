@@ -43,7 +43,13 @@ function AriaChatIllustration() {
         <div className="flex items-center gap-3 border-b border-border/60 pb-3">
           <div className="relative flex size-9 items-center justify-center rounded-full bg-primary/10">
             {/*<IconSparkles className="size-4 text-primary" stroke={1.75} />*/}
-            <Image src='/img/aria.svg' alt='Aria' width={20} height={20} className='dark:invert' />
+            <Image
+              src="/img/aria.svg"
+              alt="Aria"
+              width={20}
+              height={20}
+              className="dark:invert"
+            />
             <span className="absolute -right-0.5 -bottom-0.5 size-2.5 rounded-full bg-emerald-500 ring-2 ring-card" />
           </div>
           <div>

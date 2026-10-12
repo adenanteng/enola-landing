@@ -3,25 +3,60 @@ import { BorderBeam } from "@/components/ui/border-beam"
 import { CountUp } from "@/components/ui/motion-primitives/count-up"
 import { InfiniteSlider } from "@/components/ui/motion-primitives/infinite-slider"
 import { Reveal } from "@/components/ui/motion-primitives/reveal"
-import {
-  IconCrown,
-  IconLock,
-  IconStarFilled,
-  IconTarget,
-} from "@tabler/icons-react"
+import { IconLock, IconTarget } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
 import { HeroHeader } from "@/components/hero-section-6-header"
 
 const logos = [
-  { name: "RS Bhakti Husada", src: "/img/client/RSBH_REMBANG_LOGO.png" },
+  {
+    name: "RS Bhakti Husada",
+    src: "/img/client/RSBH_REMBANG_LOGO.png",
+    w: 531,
+    h: 165,
+  },
   {
     name: "RS Mitra Husada Pringsewu",
     src: "/img/client/RSMH_PRINGSEWU_LOGO.png",
+    w: 561,
+    h: 459,
   },
-  { name: "RSUD Pringsewu", src: "/img/client/RSUD_PRINGSEWU_LOGO.png" },
-  { name: "RSUD Ahmad Yani Metro", src: "/img/client/RSUDAY_METRO_LOGO.png" },
-  { name: "RS Yukum Medical Centre", src: "/img/client/RSYMC_YUKUM_LOGO.png" },
+  {
+    name: "RSUD Pringsewu",
+    src: "/img/client/RSUD_PRINGSEWU_LOGO.png",
+    w: 500,
+    h: 645,
+  },
+  {
+    name: "RSUD Ahmad Yani Metro",
+    src: "/img/client/RSUDAY_METRO_LOGO.png",
+    w: 220,
+    h: 235,
+  },
+  {
+    name: "RS Yukum Medical Centre",
+    src: "/img/client/RSYMC_YUKUM_LOGO.png",
+    w: 390,
+    h: 258,
+  },
+  {
+    name: "RSI Magelang",
+    src: "/img/client/RSI_MAGELANG_LOGO.png",
+    w: 438,
+    h: 438,
+  },
+  {
+    name: "RS Mardi Lestari",
+    src: "/img/client/RSML_MARDI_LESTARI_LOGO.png",
+    w: 836,
+    h: 836,
+  },
+  {
+    name: "RS Medika Mulia Tuban",
+    src: "/img/client/RSMM_TUBAN_LOGO.png",
+    w: 395,
+    h: 385,
+  },
 ]
 
 function Logos() {
@@ -35,9 +70,9 @@ function Logos() {
           <Image
             src={logo.src}
             alt={logo.name}
-            width={140}
-            height={48}
-            className="h-9 w-auto object-contain"
+            width={logo.w}
+            height={logo.h}
+            className="h-9 w-auto max-w-28 object-contain"
           />
           <span className="text-sm font-medium">{logo.name}</span>
         </div>
@@ -139,7 +174,7 @@ export default function HeroSection() {
                           </div>
                           <div>
                             <div className="text-3xl font-bold tracking-tight">
-                              <CountUp to={16} suffix="+" />
+                              <CountUp to={18} suffix="+" />
                             </div>
                             <div className="text-sm text-muted-foreground">
                               Fasilitas kesehatan mempercayai Enola
@@ -162,11 +197,11 @@ export default function HeroSection() {
                         <div className="mb-6 h-px w-full bg-border" />
 
                         <div className="grid grid-cols-3 gap-4 text-center">
-                          <StatItem value="2" label="Produk" />
+                          <StatItem value="3" label="Produk" />
                           <div className="mx-auto h-full w-px bg-border" />
-                          <StatItem value="1,5 jt+" label="Klaim Diproses" />
+                          <StatItem value="2,5 jt+" label="Klaim Diproses" />
                           <div className="mx-auto h-full w-px bg-border" />
-                          <StatItem value="13+" label="Modul Operasional" />
+                          <StatItem value="15+" label="Modul Operasional" />
                         </div>
 
                         <div className="mt-8 flex flex-wrap gap-2">
@@ -199,7 +234,7 @@ export default function HeroSection() {
                         Mitra fasilitas kesehatan kami
                       </h3>
                       <div className="relative mask-x-from-85% mask-x-to-99%">
-                        <InfiniteSlider gap={60} speed={60}>
+                        <InfiniteSlider gap={60} duration={45}>
                           <Logos />
                         </InfiniteSlider>
                       </div>

@@ -7,7 +7,7 @@ const faqs = [
       <>
         Enola memiliki dua produk utama:{" "}
         <Link
-          href="https://enola.up.railway.app"
+          href="#"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-primary"

@@ -6,7 +6,7 @@ const footerLinks = [
     name: "Produk",
     links: [
       {
-        href: "https://enola.up.railway.app",
+        href: "#",
         label: "Enola Clinica",
       },
       {

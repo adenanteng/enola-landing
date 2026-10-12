@@ -3,24 +3,24 @@
 import {
   Activity,
   ArrowRightLeft,
-  Bell,
   Calculator,
-  Calendar,
   ChevronDown,
   Clock,
   CloudDownload,
-  History,
-  Link2,
   ListChecks,
-  Mail,
   MonitorDown,
   Pill,
-  Plug,
   Stethoscope,
   User,
-  Users,
-  Zap,
   type LucideIcon,
+  BadgeCheck,
+  ChartNoAxesCombined,
+  HardDrive,
+  Workflow,
+  Unplug,
+  Headset,
+  UserRoundGroup,
+  CalendarDays,
 } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
@@ -29,7 +29,6 @@ import { Button } from "@/components/ui/button"
 import {
   IconArrowUp,
   IconHeadset,
-  IconMicrophone,
   IconPaperclip,
 } from "@tabler/icons-react"
 
@@ -49,22 +48,22 @@ const featureHighlights: Record<
   "workflow-agents": [
     { icon: ArrowRightLeft, label: "Dasbor & data pasien" },
     { icon: ListChecks, label: "Rawat jalan, inap & IGD" },
-    { icon: Zap, label: "Rekam medis digital" },
+    { icon: ChartNoAxesCombined, label: "Laporan & analitik" },
   ],
   alerts: [
-    { icon: Bell, label: "Verifikasi klaim otomatis" },
+    { icon: BadgeCheck, label: "Verifikasi klaim otomatis" },
     { icon: Clock, label: "Analisis CMG real-time" },
     { icon: Activity, label: "Monitoring dispute" },
   ],
   timeline: [
-    { icon: History, label: "Terintegrasi Satusehat" },
-    { icon: Users, label: "Klaim BPJS" },
-    { icon: Mail, label: "Perangkat keras existing" },
+    { icon: Workflow, label: "Terintegrasi Satusehat" },
+    { icon: Unplug, label: "Klaim BPJS" },
+    { icon: HardDrive, label: "Perangkat keras existing" },
   ],
   integrations: [
-    { icon: Plug, label: "Pelatihan tim fasilitas" },
-    { icon: Calendar, label: "Implementasi 1-2 minggu" },
-    { icon: Link2, label: "Dukungan teknis 24/7" },
+    { icon: UserRoundGroup, label: "Pelatihan tim fasilitas" },
+    { icon: CalendarDays, label: "Implementasi 1-2 minggu" },
+    { icon: Headset, label: "Dukungan teknis 24/7" },
   ],
 }
 
@@ -379,9 +378,9 @@ function AIInputIllustration() {
             <div className="flex size-7 cursor-pointer rounded-full *:m-auto *:size-4 hover:bg-muted">
               <IconPaperclip />
             </div>
-            <div className="flex size-7 cursor-pointer rounded-full *:m-auto *:size-4 hover:bg-muted">
-              <IconMicrophone />
-            </div>
+            {/*<div className="flex size-7 cursor-pointer rounded-full *:m-auto *:size-4 hover:bg-muted">*/}
+            {/*  <IconMicrophone />*/}
+            {/*</div>*/}
           </div>
 
           <div className="flex size-7 cursor-pointer rounded-full bg-foreground text-background *:m-auto *:size-4 hover:brightness-110">

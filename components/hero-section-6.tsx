@@ -120,7 +120,7 @@ export default function HeroSection() {
 
                   <Reveal delay={0.08}>
                     <h1 className="text-5xl font-medium tracking-tight text-balance md:text-6xl xl:text-7xl">
-                      Teknologi{" "}
+                      Teknologi {" "}
                       <span className="bg-gradient-to-br from-foreground via-foreground to-primary bg-clip-text text-transparent">
                         Kesehatan
                       </span>{" "}
@@ -154,7 +154,9 @@ export default function HeroSection() {
                         variant="outline"
                         className="w-fit"
                         nativeButton={false}
-                        render={<Link href="#contact">Hubungi Kami</Link>}
+                        render={
+                          <Link href="#contact">Diskusikan Kebutuhan</Link>
+                        }
                       />
                     </div>
                   </Reveal>
@@ -197,7 +199,7 @@ export default function HeroSection() {
                         <div className="mb-6 h-px w-full bg-border" />
 
                         <div className="grid grid-cols-3 gap-4 text-center">
-                          <StatItem value="3" label="Produk" />
+                          <StatItem value="2" label="Produk" />
                           <div className="mx-auto h-full w-px bg-border" />
                           <StatItem value="2,5 jt+" label="Klaim Diproses" />
                           <div className="mx-auto h-full w-px bg-border" />

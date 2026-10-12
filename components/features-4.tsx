@@ -28,7 +28,7 @@ const products = [
     tagline: "Aplikasi RME untuk klinik",
     description:
       "Rawat jalan, farmasi, kasir, hingga rekam medis digital dalam satu platform yang terintegrasi.",
-    href: "https://enola.up.railway.app",
+    href: "#",
   },
 ]
 
